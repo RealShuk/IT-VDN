@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приклад сторінки з кнопками</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .primary-btn {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .primary-btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .secondary-btn {
+            background-color: #2ecc71;
+            color: white;
+        }
+        
+        .secondary-btn:hover {
+            background-color: #27ae60;
+        }
+        
+        .danger-btn {
+            background-color: #e74c3c;
+            color: white;
+        }
+        
+        .danger-btn:hover {
+            background-color: #c0392b;
+        }
+        
+        .outline-btn {
+            background-color: transparent;
+            border: 2px solid #3498db;
+            color: #3498db;
+        }
+        
+        .outline-btn:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .disabled-btn {
+            background-color: #95a5a6;
+            color: white;
+            cursor: not-allowed;
+        }
+        
+        .icon-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Демонстрація різних кнопок</h1>
+    
+    <div class="button-container">
+        <!-- Основні кнопки -->
+        <button class="primary-btn">Основна кнопка</button>
+        <button class="secondary-btn">Другорядна кнопка</button>
+        <button class="danger-btn">Небезпечна дія</button>
+        
+        <!-- Кнопка з контуром -->
+        <button class="outline-btn">Кнопка з контуром</button>
+        
+        <!-- Вимкнена кнопка -->
+        <button class="disabled-btn" disabled>Вимкнена кнопка</button>
+        
+        <!-- Кнопка з іконкою -->
+        <button class="primary-btn icon-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+            </svg>
+            Кнопка з іконкою
+        </button>
+        
+        <!-- Кнопка посилання -->
+        <a href="#" class="primary-btn" style="text-decoration: none; display: inline-block; text-align: center;">Кнопка-посилання</a>
+        
+        <!-- Велика кнопка -->
+        <button class="primary-btn" style="padding: 16px 32px; font-size: 18px;">Велика кнопка</button>
+    </div>
+    
+    <div style="margin-top: 40px;">
+        <h2>Кнопки з різними станами</h2>
+        <div class="button-container">
+            <button class="primary-btn" onclick="alert('Клік зареєстровано!')">Кнопка з обробником кліку</button>
+            <button class="secondary-btn" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Кнопка з ефектом при наведенні</button>
+        </div>
+    </div>
+</body>
+</html>
